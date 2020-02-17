@@ -14,3 +14,8 @@
  - It is an API gateway(API requests router) which comes with inbuilt Ribbon load balancer.
  - There can be multiple instance of same microservice registered to Eureka. In order to evenly distribute incoming requests to each instance, Zuul's Ribbon load balancer can be used.
  - <img src="https://github.com/eshita19/spring-boot/blob/master/screenshots/zuul.png"></img>
+ 
+ ## H2
+  - It is an in-memory database that can be used with spring boot. 
+  - https://www.youtube.com/watch?v=6wUQagjtJ4c&t=177s
+  
