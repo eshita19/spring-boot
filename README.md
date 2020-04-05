@@ -7,24 +7,35 @@
   - Spring Boot dependencies use the `org.springframework.boot` groupId. 
   - Maven POM file inherits from the `spring-boot-starter-parent` project and declares dependencies to one or more “Starters”.
   - For generating spring-boot executable jar, add plugin : `spring-boot-maven-plugin` in pom.
-  - To automatically restart application on change of files in classpath, use `spring-boot-devtools` pom dependency.
+  
+  - **Auto restart**: Use `spring-boot-devtools` pom dependency.
     - application.properties's property: `spring.devtools.restart.enabled`.
     - Exclude resources which should not be watched for restart: `spring.devtools.restart.exclude=static/**,public/**`. 
     - If we want to reload application at specified amount of time. We can update one file - `src/main/resources/.reloadtrigger`.  In the property file : `spring.devtools.restart.trigger-file=.reloadtrigger`. 
-  - If you are on a Mac and use Homebrew, you can install the Spring Boot CLI by using the following commands:
+    
+  - **Spring boot CLI**: If you are on a Mac and use Homebrew, you can install the Spring Boot CLI by using the following commands:
     `brew tap pivotal/tap`
     `brew install springboot`
- - Annotations:
+    
+ - **Annotations**:
    1. `@EnableAutoConfiguration`: Tells Spring Boot to “guess” how you want to configure Spring, based on the jar dependencies that you have added.
    2. `@SpringBootApplication`: Combination of `@Combination`, `@component-scan` & `@EnableAutoConfiguration`. The Root class should be placed at the root package of application. Other classes should be placed in sub packages. 
         - Disbale particular existing config:  @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
    3. `@RestController`: Combination of `@controller` and `@ResponseBody`.
    4. `@RequestMapping`: For mapping rest endpoints.
- - Commands:
-   1. `mvn spring-boot:run` : Run Spring boot application. 
+   
+ - **Commands**:
+   1.  Run Spring boot application - `mvn spring-boot:run` : 
        - Start application - `java -jar target/myproject-0.0.1-SNAPSHOT.jar`.
        - Detailed Logs: `java -jar myproject-0.0.1-SNAPSHOT.jar --debug`
        - Debug mode: `java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n \jar target/myapplication-0.0.1-SNAPSHOT.jar`
+       
+       
+ - **Properties**:
+   1. Enable/disable auto restart: `spring.devtools.restart.enabled`.
+   2. Lazy initialization of beans: `spring.main.lazy-initialization=true`
+   3. 
+    
 
 
 ## Rest API
