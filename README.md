@@ -14,6 +14,8 @@
    2. `@SpringBootApplication`: Combination of `@Combination`, `@component-scan` & `@EnableAutoConfiguration`.
    3. `@RestController`: Combination of `@controller` and `@ResponseBody`.
    4. `@RequestMapping`: For mapping rest endpoints.
+ - Commands:
+   1. `mvn spring-boot:run` : Run Spring boot application.
 
     
     
