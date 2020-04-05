@@ -4,9 +4,10 @@
  - <img src="https://github.com/eshita19/spring-boot/blob/master/screenshots/microservice_archeticture.png"></img>
  
 ## Spring boot 
-  - Spring Boot dependencies use the org.springframework.boot groupId. 
+  - Spring Boot dependencies use the `org.springframework.boot` groupId. 
   - Maven POM file inherits from the `spring-boot-starter-parent` project and declares dependencies to one or more “Starters”.
   - For generating spring-boot executable jar, add plugin : `spring-boot-maven-plugin` in pom.
+  - To automatically restart application on change of files in classpath, use `spring-boot-devtools` plugins.
   - If you are on a Mac and use Homebrew, you can install the Spring Boot CLI by using the following commands:
     `brew tap pivotal/tap`
     `brew install springboot`
