@@ -35,6 +35,19 @@
    1. Enable/disable auto restart: `spring.devtools.restart.enabled`.
    2. Lazy initialization of beans: `spring.main.lazy-initialization=true`
    3. 
+   
+ - **Application Events and Listeners**:
+   1.`ApplicationStartingEvent`: Start of a run but before any processing, except for the registration of listeners and initializers.
+   2.`ApplicationEnvironmentPreparedEvent`: When the Environment to be used in the context is known but before the context is created.
+   3.`ApplicationContextInitializedEvent`: When the ApplicationContext is prepared and ApplicationContextInitializers have been called but before any bean definitions are loaded.
+   4. `ApplicationPreparedEvent`:  Just before the refresh is started but after bean definitions have been loaded.
+   5. `ApplicationStartedEvent`: After the context has been refreshed but before any application and command-line runners have been called.
+   6. `ApplicationReadyEvent`: After any application and command-line runners have been called. It indicates that the application is ready to service requests.
+   7. `ApplicationFailedEvent`: An ApplicationFailedEvent is sent if there is an exception on startup.
+
+
+
+
     
 
 
