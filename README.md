@@ -12,7 +12,7 @@
     `brew install springboot`
  - Annotations:
    1. `@EnableAutoConfiguration`: Tells Spring Boot to “guess” how you want to configure Spring, based on the jar dependencies that you have added.
-   2. `@SpringBootApplication`: Combination of `@Combination`, `@component-scan` & `@EnableAutoConfiguration`.
+   2. `@SpringBootApplication`: Combination of `@Combination`, `@component-scan` & `@EnableAutoConfiguration`. The Root class should be placed at the root package of application. Other classes should be placed in sub packages.
    3. `@RestController`: Combination of `@controller` and `@ResponseBody`.
    4. `@RequestMapping`: For mapping rest endpoints.
  - Commands:
