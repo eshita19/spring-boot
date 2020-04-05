@@ -38,7 +38,7 @@
    3. 
    
  - **Application Events and Listeners**:
-   _Note_: 	Some events are actually triggered before the ApplicationContext is created, so you cannot register a listener on             those as a `@Bean`. You can register them with the `SpringApplication.addListeners(…​)` method
+   _Note_: 	Some events are actually triggered before the ApplicationContext is created, so you cannot register a listener on             those as a `@EventListernet`. You can register them with the `SpringApplication.addListeners(…​)` method
    1. `ApplicationStartingEvent`: Start of a run but before any processing, except for the registration of listeners and initializers.
    2. `ApplicationEnvironmentPreparedEvent`: When the Environment to be used in the context is known but before the context is created.
    3. `ApplicationContextInitializedEvent`: When the ApplicationContext is prepared and ApplicationContextInitializers have been called but before any bean definitions are loaded.
