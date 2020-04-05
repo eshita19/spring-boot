@@ -16,7 +16,7 @@
    3. `@RestController`: Combination of `@controller` and `@ResponseBody`.
    4. `@RequestMapping`: For mapping rest endpoints.
  - Commands:
-   1. `mvn spring-boot:run` : Run Spring boot application.
+   1. `mvn spring-boot:run` : Run Spring boot application. This is equivalent to : `java -jar target/myproject-0.0.1-SNAPSHOT.jar`.
 
     
     
