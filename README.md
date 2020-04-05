@@ -22,8 +22,9 @@
    4. `@RequestMapping`: For mapping rest endpoints.
  - Commands:
    1. `mvn spring-boot:run` : Run Spring boot application. 
-       - This is equivalent to : `java -jar target/myproject-0.0.1-SNAPSHOT.jar`.
-       - java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n \jar target/myapplication-0.0.1-SNAPSHOT.jar
+       - Start application - `java -jar target/myproject-0.0.1-SNAPSHOT.jar`.
+       - Detailed Logs: `java -jar myproject-0.0.1-SNAPSHOT.jar --debug`
+       - Debug mode: `java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n \jar target/myapplication-0.0.1-SNAPSHOT.jar`
 
 
 ## Rest API
