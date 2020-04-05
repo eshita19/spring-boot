@@ -5,7 +5,8 @@
  
 ## Spring boot 
   - Spring Boot dependencies use the org.springframework.boot groupId. 
-  - Maven POM file inherits from the spring-boot-starter-parent project and declares dependencies to one or more “Starters”.
+  - Maven POM file inherits from the `spring-boot-starter-parent` project and declares dependencies to one or more “Starters”.
+  - For generating spring-boot executable jar, add plugin : `spring-boot-maven-plugin` in pom.
   - If you are on a Mac and use Homebrew, you can install the Spring Boot CLI by using the following commands:
     `brew tap pivotal/tap`
     `brew install springboot`
