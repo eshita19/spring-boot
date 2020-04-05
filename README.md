@@ -46,11 +46,8 @@
    5. `ApplicationStartedEvent`: After the context has been refreshed but before any application and command-line runners have been called.
    6. `ApplicationReadyEvent`: After any application and command-line runners have been called. It indicates that the application is ready to service requests.
    7. `ApplicationFailedEvent`: An ApplicationFailedEvent is sent if there is an exception on startup.
-
-
-
-
-    
+   8. `@ContextRefreshedEvent`: When the applicationcontext is refreshed.
+   9. `@WebServerInitializedEvent`: When the webserver is ready.
 
 
 ## Rest API
