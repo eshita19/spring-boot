@@ -8,6 +8,7 @@
   - Maven POM file inherits from the `spring-boot-starter-parent` project and declares dependencies to one or more “Starters”.
   - For generating spring-boot executable jar, add plugin : `spring-boot-maven-plugin` in pom.
   - To automatically restart application on change of files in classpath, use `spring-boot-devtools` plugins.
+    - Exclude resources which should not be watched for restart: `spring.devtools.restart.exclude=static/**,public/**`.
   - If you are on a Mac and use Homebrew, you can install the Spring Boot CLI by using the following commands:
     `brew tap pivotal/tap`
     `brew install springboot`
