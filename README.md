@@ -10,8 +10,7 @@
     `brew tap pivotal/tap`
     `brew install springboot`
  - Annotations:
-   1. `@EnableAutoConfiguration`: Enable auto-configuration of the Spring Application Context, attempting to guess and
-    configure beans that you are likely to need. Auto-configuration classes are usually applied based on your classpath and  what beans you have defined. For example, if you have  tomcat-embedded.jar on your classpath you are likely to want a TomcatServletWebServerFactory.
+   1. `@EnableAutoConfiguration`: Tells Spring Boot to “guess” how you want to configure Spring, based on the jar dependencies that you have added.
    2. `@SpringBootApplication`: Combination of `@Combination`, `@component-scan` & `@EnableAutoConfiguration`.
    3. `@RestController`: Combination of `@controller` and `@ResponseBody`.
    4. `@RequestMapping`: For mapping rest endpoints.
