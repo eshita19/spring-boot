@@ -9,6 +9,11 @@
   - If you are on a Mac and use Homebrew, you can install the Spring Boot CLI by using the following commands:
     `brew tap pivotal/tap`
     `brew install springboot`
+ - Annotation:
+   1. `@EnableAutoConfiguration`: Enable auto-configuration of the Spring Application Context, attempting to guess and
+    configure beans that you are likely to need. Auto-configuration classes are usually applied based on your classpath and  what beans you have defined. For example, if you have  tomcat-embedded.jar on your classpath you are likely to want a TomcatServletWebServerFactory.
+   2. `@SpringBootApplication`: Combination of `@Combination`, `@component-scan` & `@EnableAutoConfiguration`.
+
     
     
 
