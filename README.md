@@ -2,6 +2,15 @@
 
 ## Micro Service Architecture
  - <img src="https://github.com/eshita19/spring-boot/blob/master/screenshots/microservice_archeticture.png"></img>
+ 
+## Spring boot 
+  - Spring Boot dependencies use the org.springframework.boot groupId. 
+  - Maven POM file inherits from the spring-boot-starter-parent project and declares dependencies to one or more “Starters”.
+  - If you are on a Mac and use Homebrew, you can install the Spring Boot CLI by using the following commands:
+    `brew tap pivotal/tap`
+    `brew install springboot`
+    
+    
 
 ## Rest API
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
