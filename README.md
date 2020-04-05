@@ -8,9 +8,8 @@
   - Maven POM file inherits from the `spring-boot-starter-parent` project and declares dependencies to one or more “Starters”.
   - For generating spring-boot executable jar, add plugin : `spring-boot-maven-plugin` in pom.
   - To automatically restart application on change of files in classpath, use `spring-boot-devtools` pom dependency.
-    - Property: `spring.devtools.restart.enabled`.
-    - Exclude resources which should not be watched for restart: `spring.devtools.restart.exclude=static/**,public/**`.
-    - If you need to completely disable restart support, you need to set the folowing property to false before calling SpringApplication.run(…) : `System.setProperty("spring.devtools.restart.enabled", "false");`.  
+    - application.properties's property: `spring.devtools.restart.enabled`.
+    - Exclude resources which should not be watched for restart: `spring.devtools.restart.exclude=static/**,public/**`. 
     - If we want to reload application at specified amount of time. We can update one file - `src/main/resources/.reloadtrigger`.  In the property file : `spring.devtools.restart.trigger-file=.reloadtrigger`. 
   - If you are on a Mac and use Homebrew, you can install the Spring Boot CLI by using the following commands:
     `brew tap pivotal/tap`
