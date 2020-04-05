@@ -24,6 +24,7 @@
    3. `@RestController`: Combination of `@controller` and `@ResponseBody`.
    4. `@RequestMapping`: For mapping rest endpoints.
    5. `@EventListener`: makes a method listener of an event.
+   6. `@Autowired public MyBean(ApplicationArguments args) {}`: Inject application arguments to a bean.
    
  - **Commands**:
    1.  Run Spring boot application - `mvn spring-boot:run` : 
