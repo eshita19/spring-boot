@@ -7,7 +7,7 @@
   - Spring Boot dependencies use the `org.springframework.boot` groupId. 
   - Maven POM file inherits from the `spring-boot-starter-parent` project and declares dependencies to one or more “Starters”.
   - For generating spring-boot executable jar, add plugin : `spring-boot-maven-plugin` in pom.
-  - To automatically restart application on change of files in classpath, use `spring-boot-devtools` plugins.
+  - To automatically restart application on change of files in classpath, use `spring-boot-devtools` pom dependency.
     - Property: `spring.devtools.restart.enabled`.
     - Exclude resources which should not be watched for restart: `spring.devtools.restart.exclude=static/**,public/**`.
     - If you need to completely disable restart support, you need to set the folowing property to false before calling SpringApplication.run(…) : `System.setProperty("spring.devtools.restart.enabled", "false");`.  
