@@ -30,7 +30,7 @@
    1.  Run Spring boot application - `mvn spring-boot:run` : 
        - Start application - `java -jar target/myproject-0.0.1-SNAPSHOT.jar`.
        - Detailed Logs: `java -jar myproject-0.0.1-SNAPSHOT.jar --debug`
-       - Debug mode: `java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n \jar target/myapplication-0.0.1-SNAPSHOT.jar`
+       - Debug mode: `java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n -jar target/myapplication-0.0.1-SNAPSHOT.jar`
        
        
  - **Properties**:
