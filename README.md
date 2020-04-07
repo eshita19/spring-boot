@@ -50,6 +50,9 @@
    7. `ApplicationFailedEvent`: An ApplicationFailedEvent is sent if there is an exception on startup.
    8. `@ContextRefreshedEvent`: When the applicationcontext is refreshed.
    9. `@WebServerInitializedEvent`: When the webserver is ready.
+   
+ - **Passing arguments to application**:
+   1. ApplicationArguments bean can be injected to access arguments passed to application.
 
 
 ## Rest API
