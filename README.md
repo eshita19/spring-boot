@@ -37,6 +37,7 @@
    1. Enable/disable auto restart: `spring.devtools.restart.enabled`.
    2. Lazy initialization of beans: `spring.main.lazy-initialization=true`
    3. Turn off startup logs: `spring.main.log-startup-info`
+  
    
  - **Application Events and Listeners**:
    _Note_: 	Some events are actually triggered before the ApplicationContext is created, so you cannot register a listener on             those as a `@EventListernet`. You can register them with the `SpringApplication.addListeners(…​)` method
