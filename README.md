@@ -52,7 +52,7 @@
    9. `@WebServerInitializedEvent`: When the webserver is ready.
    
  - **Passing arguments to application**:
-   1. ApplicationArguments bean can be injected to access arguments passed to application.
+   1. `ApplicationArguments` bean can be injected to access arguments passed to application.
 
 
 ## Rest API
