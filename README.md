@@ -53,6 +53,17 @@
    
  - **Passing arguments to application**:
    1. `ApplicationArguments` bean can be injected to access arguments passed to application.
+   
+ - **Using ApplicationRunner or CommandLineRunner**:
+   - Called just before `SpringApplication.run(…​)` completes.
+  `
+      @Component
+      public class MyBean implements CommandLineRunner {
+          public void run(String... args) {
+              // Do something...
+          }
+      }
+     `
 
 
 ## Rest API
