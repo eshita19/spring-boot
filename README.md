@@ -38,6 +38,7 @@
    1. Enable/disable auto restart: `spring.devtools.restart.enabled`.
    2. Lazy initialization of beans: `spring.main.lazy-initialization=true`
    3. Turn off startup logs: `spring.main.log-startup-info`
+   4. Enable admin feature: `spring.application.admin.enabled`
   
    
  - **Application Events and Listeners**: https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/EventListenerEx.java
@@ -65,7 +66,9 @@
           }
       }
      `
-
+ - **Admin Features**:
+   - Enable admin feature using `spring.application.admin.enabled` property. It exposes MBean `SpringApplicationAdminMXBean` which can be used by MBeanServer.
+ 
 ## Rest API
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
 
