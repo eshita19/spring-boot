@@ -69,6 +69,9 @@
  - **Admin Features**:
    - Enable admin feature using `spring.application.admin.enabled` property. It exposes MBean `SpringApplicationAdminMXBean` which can be used by MBeanServer.
  
+ - **Externalized Configuration**: 
+   - 
+ 
 ## Rest API
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
 
