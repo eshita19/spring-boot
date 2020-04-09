@@ -19,7 +19,7 @@
     
  - **Annotations**:
    1. `@EnableAutoConfiguration`: Tells Spring Boot to “guess” how you want to configure Spring, based on the jar dependencies that you have added.
-   2. `@SpringBootApplication`: Combination of `@Combination`, `@component-scan` & `@EnableAutoConfiguration`. The Root class should be placed at the root package of application. Other classes should be placed in sub packages. 
+   2. `@SpringBootApplication`: Combination of `@Configuration`, `@component-scan` & `@EnableAutoConfiguration`. The Root class should be placed at the root package of application. Other classes should be placed in sub packages. 
         - Disbale particular existing config:  @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
    3. `@RestController`: Combination of `@controller` and `@ResponseBody`.
    4. `@RequestMapping`: For mapping rest endpoints.
@@ -40,7 +40,7 @@
   
    
  - **Application Events and Listeners**:
-   _Note_: 	Some events are actually triggered before the ApplicationContext is created, so you cannot register a listener on             those as a `@EventListernet`. You can register them with the `SpringApplication.addListeners(…​)` method
+   _Note_: 	Some events are actually triggered before the ApplicationContext is created, so you cannot register a listener on             those as a `@EventListerner`. You can register them with the `SpringApplication.addListeners(…​)` method
    1. `ApplicationStartingEvent`: Start of a run but before any processing, except for the registration of listeners and initializers.
    2. `ApplicationEnvironmentPreparedEvent`: When the Environment to be used in the context is known but before the context is created.
    3. `ApplicationContextInitializedEvent`: When the ApplicationContext is prepared and ApplicationContextInitializers have been called but before any bean definitions are loaded.
