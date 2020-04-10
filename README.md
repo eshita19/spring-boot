@@ -71,7 +71,7 @@
  
  - **Externalized Configuration**: 
    - Spring Boot lets you externalize your configuration so that you can work with the same application code in different environments. 
-   - The property value can be accessed by beans using `@Value` annotation.
+   - The property value can be accessed by beans using `@Value` annotation. https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/Example.java#L9.
    - Order in which properties are considered:
       - $HOME/.config/spring-boot folder when devtools is active.
       - @TestPropertySource annotations on your tests
