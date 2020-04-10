@@ -44,7 +44,7 @@
    7. Spring boot root log level: `logging.level.root=warn`
    8. Spring boot spring web: `logging.level.org.springframework.web=debug`
    9. Create logging group: `logging.group.tomcat=org.apache.catalina, org.apache.coyote, org.apache.tomcat`, `logging.level.tomcat=TRACE'.
-   10. 
+   10. Specify message property file for internationalization: `spring.messages.basename=messages`
   
    
  - **Application Events and Listeners**: https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/EventListenerEx.java
