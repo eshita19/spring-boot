@@ -39,6 +39,8 @@
    2. Lazy initialization of beans: `spring.main.lazy-initialization=true`
    3. Turn off startup logs: `spring.main.log-startup-info`
    4. Enable admin feature: `spring.application.admin.enabled`
+   5. Active profiles: `spring.profiles.active=dev,hsqldb`
+   6. Store Spring boot startup logs: `logging.file.path`
   
    
  - **Application Events and Listeners**: https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/EventListenerEx.java
