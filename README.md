@@ -70,7 +70,22 @@
    - Enable admin feature using `spring.application.admin.enabled` property. It exposes MBean `SpringApplicationAdminMXBean` which can be used by MBeanServer.
  
  - **Externalized Configuration**: 
-   - 
+   - Spring Boot lets you externalize your configuration so that you can work with the same application code in different environments. 
+   - Order in which properties are considered:
+      - $HOME/.config/spring-boot folder when devtools is active.
+      - @TestPropertySource annotations on your tests
+      - Properties attribute on your tests.
+      - Command line arguments.
+      - Properties from SPRING_APPLICATION_JSON.
+      - ServletConfig init parameters.
+      - ServletContext init parameters.
+      - JNDI attributes from java:comp/env.
+      - Java System properties (System.getProperties()).
+      - OS environment variables.
+      - A RandomValuePropertySource that has properties only in random.*.
+      - Application properties outside of your packaged jar.
+      - Application properties inside of your packaged jar.
+      - Default properties (specified by setting SpringApplication.setDefaultProperties).
  
 ## Rest API
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
