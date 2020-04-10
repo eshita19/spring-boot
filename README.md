@@ -71,12 +71,12 @@
  
  - **Externalized Configuration**: 
    - Spring Boot lets you externalize your configuration so that you can work with the same application code in different environments. 
-   - The property value can be accessed by beans using `@Value` annotation.
+   - The property value can be accessed by beans using `@Value` annotation. https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/Example.java#L9.
    - Order in which properties are considered:
       - $HOME/.config/spring-boot folder when devtools is active.
       - @TestPropertySource annotations on your tests
       - Properties attribute on your tests.
-      - Command line arguments.
+      - Command line arguments: SpringApplication converts any command line option arguments (i.e, arguments starting with --, such as --server.port=9000) to a property and adds them to the Spring Environment. 
       - Properties from SPRING_APPLICATION_JSON. `java -Dspring.application.json='{"name":"test"}' -jar myapp.jar`
       - ServletConfig init parameters.
       - ServletContext init parameters.
@@ -84,9 +84,18 @@
       - Java System properties (System.getProperties()).
       - OS environment variables.
       - A RandomValuePropertySource that has properties only in random.*.
-      - Application properties outside of your packaged jar.
-      - Application properties inside of your packaged jar.
+      - Application properties outside of your packaged jar. 
+      - Application properties inside of your packaged jar. 
+          - Order in which properties are accessed: /config subdir in curr dir, current dir, classpath /config package, classpath root. 
+          - Change the name of the property file, by specifying the name: `java -jar myproject.jar --spring.config.name=myproject` or `java -jar myproject.jar --spring.config.location=classpath:/default.properties,classpath:/override.properties`.
+          - Maven profile-specific properties can also be defined by using the following naming convention: `application-{profile}.properties`.
       - Default properties (specified by setting SpringApplication.setDefaultProperties).
+      
+- **Configuring Random values**:
+  - We can inject randome values like this:
+     - `my.secret=${random.value}`
+     - `my.number=${random.int}`
+     - `my.uuid=${random.uuid}`
  
 ## Rest API
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
