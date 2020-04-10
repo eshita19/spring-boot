@@ -87,6 +87,12 @@
       - Application properties outside of your packaged jar.
       - Application properties inside of your packaged jar.
       - Default properties (specified by setting SpringApplication.setDefaultProperties).
+      
+- **Configuring Random values**:
+  - We can inject randome values like this:
+     - `my.secret=${random.value}`
+     - `my.number=${random.int}`
+     - `my.uuid=${random.uuid}`
  
 ## Rest API
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
