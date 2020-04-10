@@ -85,7 +85,9 @@
       - OS environment variables.
       - A RandomValuePropertySource that has properties only in random.*.
       - Application properties outside of your packaged jar. 
-      - Application properties inside of your packaged jar. Order in which properties are accessed: /config subdir in curr dir, current dir, classpath /config package, classpath root. Change the name of the property file, by specifying the name: `java -jar myproject.jar --spring.config.name=myproject` or `java -jar myproject.jar --spring.config.location=classpath:/default.properties,classpath:/override.properties`
+      - Application properties inside of your packaged jar. 
+          - Order in which properties are accessed: /config subdir in curr dir, current dir, classpath /config package, classpath root. 
+          - Change the name of the property file, by specifying the name: `java -jar myproject.jar --spring.config.name=myproject` or `java -jar myproject.jar --spring.config.location=classpath:/default.properties,classpath:/override.properties`
       - Default properties (specified by setting SpringApplication.setDefaultProperties).
       
 - **Configuring Random values**:
