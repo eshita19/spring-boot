@@ -89,6 +89,9 @@
           - Order in which properties are accessed: /config subdir in curr dir, current dir, classpath /config package, classpath root. 
           - Change the name of the property file, by specifying the name: `java -jar myproject.jar --spring.config.name=myproject` or `java -jar myproject.jar --spring.config.location=classpath:/default.properties,classpath:/override.properties`.
           - Maven profile-specific properties can also be defined by using the following naming convention: `application-{profile}.properties`.
+          - Placeholders in properties: A new property canrefer back previously defined proeprty in application.properties using `${}`.
+          - In order to encrypt a property in application.properties, implement 'EnvironmentPostProcessor' which allows to manipulate properties.
+          - Handling hierarchical properties: https://github.com/eshita19/spring-boot/commit/e528fa53b98ed1b455cf0fa854625bd66c69e32c#diff-2fc9b9a9cf6b3dd6258d2edf9167e032
       - Default properties (specified by setting SpringApplication.setDefaultProperties).
       
 - **Configuring Random values**:
