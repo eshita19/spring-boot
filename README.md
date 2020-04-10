@@ -76,7 +76,7 @@
       - $HOME/.config/spring-boot folder when devtools is active.
       - @TestPropertySource annotations on your tests
       - Properties attribute on your tests.
-      - Command line arguments.
+      - Command line arguments: SpringApplication converts any command line option arguments (i.e, arguments starting with --, such as --server.port=9000) to a property and adds them to the Spring Environment. 
       - Properties from SPRING_APPLICATION_JSON. `java -Dspring.application.json='{"name":"test"}' -jar myapp.jar`
       - ServletConfig init parameters.
       - ServletContext init parameters.
