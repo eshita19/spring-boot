@@ -7,9 +7,10 @@
   - Spring Boot dependencies use the `org.springframework.boot` groupId. 
   - Maven POM file inherits from the `spring-boot-starter-parent` project and declares dependencies to one or more “Starters”.
   - For generating spring-boot executable jar, add plugin : `spring-boot-maven-plugin` in pom.
+  - https://github.com/eshita19/spring-boot/blob/master/spring-boot1/pom.xml
   
   - **Auto restart**: Use `spring-boot-devtools` pom dependency.
-    - application.properties's property: `spring.devtools.restart.enabled`.
+    - application.properties's property: `spring.devtools.restart.enabled`.(https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/resources/application.properties)
     - Exclude resources which should not be watched for restart: `spring.devtools.restart.exclude=static/**,public/**`. 
     - If we want to reload application at specified amount of time. We can update one file - `src/main/resources/.reloadtrigger`.  In the property file : `spring.devtools.restart.trigger-file=.reloadtrigger`. 
     
@@ -33,13 +34,14 @@
        - Debug mode: `java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n -jar target/myapplication-0.0.1-SNAPSHOT.jar`
        
        
- - **Properties**:
+ - **Properties**: https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/resources/application.properties
    1. Enable/disable auto restart: `spring.devtools.restart.enabled`.
    2. Lazy initialization of beans: `spring.main.lazy-initialization=true`
    3. Turn off startup logs: `spring.main.log-startup-info`
+   4. Enable admin feature: `spring.application.admin.enabled`
   
    
- - **Application Events and Listeners**:
+ - **Application Events and Listeners**: https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/EventListenerEx.java
    _Note_: 	Some events are actually triggered before the ApplicationContext is created, so you cannot register a listener on             those as a `@EventListerner`. You can register them with the `SpringApplication.addListeners(…​)` method
    1. `ApplicationStartingEvent`: Start of a run but before any processing, except for the registration of listeners and initializers.
    2. `ApplicationEnvironmentPreparedEvent`: When the Environment to be used in the context is known but before the context is created.
@@ -51,10 +53,10 @@
    8. `@ContextRefreshedEvent`: When the applicationcontext is refreshed.
    9. `@WebServerInitializedEvent`: When the webserver is ready.
    
- - **Passing arguments to application**:
+ - **Passing arguments to application**: https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/Starter.java
    1. `ApplicationArguments` bean can be injected to access arguments passed to application.
    
- - **Using ApplicationRunner or CommandLineRunner**:
+ - **Using ApplicationRunner or CommandLineRunner**:https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/Starter.java
    - Called just before `SpringApplication.run(…​)` completes.
   `
       @Component
@@ -64,8 +66,28 @@
           }
       }
      `
-
-
+ - **Admin Features**:
+   - Enable admin feature using `spring.application.admin.enabled` property. It exposes MBean `SpringApplicationAdminMXBean` which can be used by MBeanServer.
+ 
+ - **Externalized Configuration**: 
+   - Spring Boot lets you externalize your configuration so that you can work with the same application code in different environments. 
+   - The property value can be accessed by beans using `@Value` annotation.
+   - Order in which properties are considered:
+      - $HOME/.config/spring-boot folder when devtools is active.
+      - @TestPropertySource annotations on your tests
+      - Properties attribute on your tests.
+      - Command line arguments.
+      - Properties from SPRING_APPLICATION_JSON. `java -Dspring.application.json='{"name":"test"}' -jar myapp.jar`
+      - ServletConfig init parameters.
+      - ServletContext init parameters.
+      - JNDI attributes from java:comp/env.
+      - Java System properties (System.getProperties()).
+      - OS environment variables.
+      - A RandomValuePropertySource that has properties only in random.*.
+      - Application properties outside of your packaged jar.
+      - Application properties inside of your packaged jar.
+      - Default properties (specified by setting SpringApplication.setDefaultProperties).
+ 
 ## Rest API
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
 
