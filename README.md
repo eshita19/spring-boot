@@ -105,6 +105,14 @@
      - `my.secret=${random.value}`
      - `my.number=${random.int}`
      - `my.uuid=${random.uuid}`
+     
+## Spring datasource:
+`
+spring.datasource.url=jdbc:mysql://localhost/test
+spring.datasource.username=dbuser
+spring.datasource.password=dbpass
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+`
  
 ## Rest API
 - Spring-boot with jersey using `spring-boot-starter-jersey dependency`. https://github.com/eshita19/spring-boot/tree/master/spring-boot-jax-rs.
