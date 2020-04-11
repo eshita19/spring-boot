@@ -1,12 +1,16 @@
 package com.esh.ex;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.event.EventListener;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Example {
+	private Logger logger = LoggerFactory.getLogger(EventListener.class.getName());
 	@Value(value = "${spring.devtools.remote.secret}")
 	private String remoteSecret;
 	
@@ -31,6 +35,7 @@ public class Example {
 
 	@RequestMapping("/")
     String home() {
+		logger.info("Hi All");
         return "Hello World! This is " +  eshProps.getName()  + ". Admin enabled is " + remoteSecret;
     }
 }

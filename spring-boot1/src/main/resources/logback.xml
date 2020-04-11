@@ -1,0 +1,8 @@
+<configuration scan="true">
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/Users/emathur/mrepo/mlog/log.out</file>
+	</appender>
+    <root level="TRACE">
+    	<appender-ref ref="FILE"/>
+    </root>
+</configuration>
