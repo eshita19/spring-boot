@@ -111,7 +111,8 @@
 - Spring boot with spring web : https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
 
 ## Registering Servlets, Filters, and Listeners as Spring Beans
- - We can use the `ServletRegistrationBean`, `FilterRegistrationBean`, and `ServletListenerRegistrationBean` classes
+ - We can use the `ServletRegistrationBean`, `FilterRegistrationBean`, and `ServletListenerRegistrationBean` classes.
+ - https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/SpringBootConfig.java.
 
 
 ## Eureka
