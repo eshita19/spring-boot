@@ -45,6 +45,14 @@
    8. Spring boot spring web: `logging.level.org.springframework.web=debug`
    9. Create logging group: `logging.group.tomcat=org.apache.catalina, org.apache.coyote, org.apache.tomcat`, `logging.level.tomcat=TRACE'.
    10. Specify message property file for internationalization: `spring.messages.basename=messages`
+   11. Datasource properties:  
+       -  ` spring.datasource.url=jdbc:mysql://localhost/test`
+       -  ` spring.datasource.username=dbuser`
+       - ` spring.datasource.password=dbpass`
+       - ` spring.datasource.driver-class-name=com.mysql.jdbc.Driver`
+
+       spring.datasource.jndi-name=java:jboss/datasources/customers
+    `
   
    
  - **Application Events and Listeners**: https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/EventListenerEx.java
@@ -107,12 +115,11 @@
      - `my.uuid=${random.uuid}`
      
 ## Spring datasource:
-`
-spring.datasource.url=jdbc:mysql://localhost/test
-spring.datasource.username=dbuser
-spring.datasource.password=dbpass
-spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-`
+- `spring.datasource.url=jdbc:mysql://localhost/test`
+- `spring.datasource.username=dbuser`
+- `spring.datasource.password=dbpass`
+- `spring.datasource.driver-class-name=com.mysql.jdbc.Driver`
+- `spring.datasource.jndi-name=java:jboss/datasources/customers`
  
 ## Rest API
 - Spring-boot with jersey using `spring-boot-starter-jersey dependency`. https://github.com/eshita19/spring-boot/tree/master/spring-boot-jax-rs.
