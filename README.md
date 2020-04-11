@@ -39,6 +39,12 @@
    2. Lazy initialization of beans: `spring.main.lazy-initialization=true`
    3. Turn off startup logs: `spring.main.log-startup-info`
    4. Enable admin feature: `spring.application.admin.enabled`
+   5. Active profiles: `spring.profiles.active=dev,hsqldb`
+   6. Store Spring boot startup logs: `logging.file.path`
+   7. Spring boot root log level: `logging.level.root=warn`
+   8. Spring boot spring web: `logging.level.org.springframework.web=debug`
+   9. Create logging group: `logging.group.tomcat=org.apache.catalina, org.apache.coyote, org.apache.tomcat`, `logging.level.tomcat=TRACE'.
+   10. Specify message property file for internationalization: `spring.messages.basename=messages`
   
    
  - **Application Events and Listeners**: https://github.com/eshita19/spring-boot/blob/master/spring-boot1/src/main/java/com/esh/ex/EventListenerEx.java
@@ -101,7 +107,12 @@
      - `my.uuid=${random.uuid}`
  
 ## Rest API
+- We can use jersey with spring-boot using `spring-boot-starter-jersey dependency`.
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
+
+## Registering Servlets, Filters, and Listeners as Spring Beans
+ - We can use the `ServletRegistrationBean`, `FilterRegistrationBean`, and `ServletListenerRegistrationBean` classes
+
 
 ## Eureka
 - It is an API discovery service. Multiple microservice can register to Eureka. Each microservice will bee discovery client to Eureka.
