@@ -107,7 +107,12 @@
      - `my.uuid=${random.uuid}`
  
 ## Rest API
+- We can use jersey with spring-boot using `spring-boot-starter-jersey dependency`.
 - https://github.com/eshita19/spring-boot/tree/master/spring-boot-sample
+
+## Registering Servlets, Filters, and Listeners as Spring Beans
+ - We can use the `ServletRegistrationBean`, `FilterRegistrationBean`, and `ServletListenerRegistrationBean` classes
+
 
 ## Eureka
 - It is an API discovery service. Multiple microservice can register to Eureka. Each microservice will bee discovery client to Eureka.
